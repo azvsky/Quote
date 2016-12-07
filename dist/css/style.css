@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Arial Narrow";
+  src: url('../font/ARIALN.TTF');
+}
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial Narrow";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: #939393;
+}
+.quote-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.quote-item__web {
+  position: absolute;
+  z-index: 10;
+  top: 17px;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  color: #27ae60;
+}
+.quote-item__description {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  line-height: 28px;
+  background-color: #62d995;
+  overflow-y: hidden;
+}
+.quote-item__container {
+  max-width: 700px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+.quote-item__person {
+  box-sizing: border-box;
+  background-color: #67b2e4;
+}
+.quote-item__title {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  padding: 0;
+  margin: 0;
+  padding-top: 107px;
+  font-size: inherit;
+  line-height: inherit;
+  overflow-y: hidden;
+}
+.quote-item__title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: url('../img/sprite.png') no-repeat;
+}
+.quote-item__title-firstly::before {
+  background-position: -10px -130px;
+}
+.quote-item__title-secondly::before {
+  background-position: -10px -10px;
+}
+.button-slide {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 60px;
+  margin: auto;
+  cursor: pointer;
+  font-size: 0;
+  border: none;
+  outline: none;
+  background: url('../img/sprite.png') no-repeat;
+}
+.button-slide-prev {
+  background-position: -10px -250px;
+}
+.button-slide-next {
+  right: 0;
+  background-position: -10px -330px;
+}
+@media (max-height: 413px) and (max-width: 1400px) {
+  .quote-item__description {
+    font-size: 20px;
+  }
+  .quote-item__title {
+    padding-top: 24px;
+    padding-left: 100px;
+    padding-bottom: 33px;
+  }
+  .quote-item__title::before {
+    top: 0;
+    left: 0;
+  }
+}
+@media (min-width: 700px) {
+  .button-slide-prev {
+    left: 60px;
+  }
+  .button-slide-next {
+    right: 60px;
+  }
+}
